@@ -5,7 +5,7 @@ Mini project analyzing mental health trends using Python, SQLite, Excel, JSON, a
 This mini-project explores mental health trends, focusing on how lifestyle factors, sleep, stress, and social interactions impact happiness and overall well-being. The main objective was to practice the end-to-end workflow of a Data Analyst, including data collection, cleaning, enrichment, and visualization, while applying Python, SQL, Excel, JSON, and Power BI in a real-world scenario.
 
 # Technologies Used & Purpose
-Technology Purpose Python (pandas, numpy) Load, explore, and preprocess raw CSV data. Check trends, inconsistencies, and structure the data for database storage. Excel Initial data cleaning and handling missing or inconsistent values. Useful for quick inspection and validation. SQLite / SQL Create new fields, transform data, and enrich datasets using SQL queries. Enables structured data ready for analysis. JSON Structure processed data for seamless integration with Power BI. Power BI Build an interactive dashboard visualizing trends, KPIs, and risk insights across gender, age, and lifestyle segments.
+Technology Purpose Python (pandas, numpy) Load, explore, and preprocess raw CSV data. Check trends, inconsistencies, and structure the data for database storage. Excel Initial data cleaning and handling missing or inconsistent values. Useful for quick inspection and validation. postgreSQL Create new fields, transform data, and enrich datasets using SQL queries. Enables structured data ready for analysis. JSON Structure processed data for seamless integration with Power BI. Power BI Build an interactive dashboard visualizing trends, KPIs, and risk insights across gender, age, and lifestyle segments.
 
 # Workflow
 Data Acquisition & Exploration o Dataset fetched from Kaggle. o Explored using Python to understand trends, distributions, and inconsistencies.
@@ -23,6 +23,6 @@ The project demonstrates a complete data analytics workflow:
 
 Raw data ingestion → Python exploration
 Cleaning & preprocessing → Excel
-Data enrichment → SQLite / SQL
+Data enrichment → postgreSQL
 Structuring for visualization → JSON
 Insight generation → Power BI dashboard It allowed combining multiple tools and techniques while practicing logic creation, data transformation, and visualization design skills essential for a professional Data Analyst.
