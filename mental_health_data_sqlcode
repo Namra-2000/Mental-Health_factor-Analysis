@@ -1,0 +1,70 @@
+a) Create_age_group.sql
+
+-- Categorize age into groups for easier analysis
+ALTER TABLE mental_health_data ADD COLUMN age_group VARCHAR(20);
+
+UPDATE mental_health_data
+SET age_group = CASE
+    WHEN Age < 30 THEN 'Under 30'
+    WHEN Age BETWEEN 30 AND 45 THEN '30-45'
+    ELSE '45+'
+END;
+
+
+b) update_condition.sql
+
+-- Create a binary flag for whether a mental health condition exists
+UPDATE mental_health_data
+SET Has_condition = CASE
+    WHEN "Mental Health Condition" IS NOT NULL THEN 1
+    ELSE 0
+END;
+
+
+c) sleep_quality.sql
+
+-- Determine sleep quality based on hours slept and stress level
+ALTER TABLE mental_health_data ADD COLUMN Sleep_Quality VARCHAR(20);
+
+UPDATE mental_health_data
+SET Sleep_Quality = CASE
+    WHEN "Sleep Hours" >= 7 AND "Stress Level" = 'Low' THEN 'Good'
+    WHEN "Sleep Hours" < 7 AND "Stress Level" = 'High' THEN 'Poor'
+    ELSE 'Average'
+END;
+
+
+d) lifestyle_segment.sql
+
+-- Combine diet type and exercise level into a single lifestyle segment
+ALTER TABLE mental_health_data ADD COLUMN Lifestyle_Segment VARCHAR(50);
+
+UPDATE mental_health_data
+SET Lifestyle_Segment = CONCAT("Diet Type", '_', "Exercise Level");
+
+
+e) lifestyle_risk_score.sql
+
+-- Calculate a risk score based on sleep quality, stress level, and activity
+ALTER TABLE mental_health_data ADD COLUMN Lifestyle_Risk_Score INT;
+
+UPDATE mental_health_data
+SET Lifestyle_Risk_Score =
+    (CASE WHEN "Sleep Quality" = 'Poor' THEN 2
+          WHEN "Sleep Quality" = 'Average' THEN 1
+          ELSE 0 END) +
+    (CASE WHEN "Stress Level" = 'High' THEN 2 ELSE 0 END) +
+    (CASE WHEN "Activity_Level" = 'Low' THEN 1 ELSE 0 END);
+
+
+f) condition_severity.sql
+
+-- Assign severity scores for mental health conditions
+ALTER TABLE mental_health_data ADD COLUMN Condition_Severity INT;
+
+UPDATE mental_health_data
+SET Condition_Severity = CASE
+    WHEN "Mental Health Condition" IN ('PTSD', 'Depression', 'Anxiety') THEN 3
+    WHEN "Mental Health Condition" IS NOT NULL THEN 2
+    ELSE 1
+END;
