@@ -1,15 +1,16 @@
 # Mental-Heakth_factor-Analysis 
-Mini project analyzing mental health trends using Python, PostgreSQL, Excel, JSON, and Power BI. Collected, cleaned, and structured data, performed analysis, and created an interactive dashboard to visualize patterns and insights across factors affecting mental health.
+Mini project analyzing mental health trends using Python, PostgreSQL, Excel, and Power BI. Collected, cleaned, and structured data, performed analysis, and created an interactive dashboard to visualize patterns and insights across factors affecting mental health.
 
 # Overview
-This mini-project explores mental health trends, focusing on how lifestyle factors, sleep, stress, and social interactions impact happiness and overall well-being. The main objective was to practice the end-to-end workflow of a Data Analyst, including data collection, cleaning, enrichment, and visualization, while applying Python, SQL, Excel, JSON, and Power BI in a real-world scenario.
+This mini-project explores mental health trends, focusing on how lifestyle factors, sleep, stress, and social interactions impact happiness and overall well-being. The main objective was to practice the end-to-end workflow of a Data Analyst, including data collection, cleaning, enrichment, and visualization, while applying Python, SQL, Excel,  and Power BI in a real-world scenario.
 
 # Technologies Used & Purpose
 Technology Purpose Python (pandas, numpy) Load, explore, and preprocess raw CSV data. Check trends, inconsistencies, and structure the data for database storage. Excel Initial data cleaning and handling missing or inconsistent values. Useful for quick inspection and validation. postgreSQL Create new fields, transform data, and enrich datasets using SQL queries. Enables structured data ready for analysis. JSON Structure processed data for seamless integration with Power BI. Power BI Build an interactive dashboard visualizing trends, KPIs, and risk insights across gender, age, and lifestyle segments.
 
 # Workflow
-Data Acquisition & Exploration o Dataset fetched from Kaggle. 
-Explored using Python to understand trends, distributions, and inconsistencies.
+Data Acquisition & Exploration
+ Dataset fetched from Kaggle. 
+ Explored using Python to understand trends, distributions, and inconsistencies.
 
 Data Cleaning & Preprocessing
 Handled missing values, standardized column names, and verified data integrity in Excel.Ensured smooth transition to database storage.
