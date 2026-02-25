@@ -11,18 +11,19 @@ Technology Purpose Python (pandas, numpy) Load, explore, and preprocess raw CSV 
 Data Acquisition & Exploration o Dataset fetched from Kaggle. 
 Explored using Python to understand trends, distributions, and inconsistencies.
 
-Data Cleaning & Preprocessing o Handled missing values, standardized column names, and verified data integrity in Excel.Ensured smooth transition to database storage.
+Data Cleaning & Preprocessing
+Handled missing values, standardized column names, and verified data integrity in Excel.Ensured smooth transition to database storage.
 
 Data Enrichment (PostgreSQL ) Several additional fields were created to facilitate analysis: Field Description / Logic Purpose age_group Categorized ages: Under 30, 30–45, 45+ Compare trends across age segments Has_condition Binary flag: 1 if “Mental Health Condition” exists, else 0 Easily aggregate prevalence of mental health conditions Sleep_Quality Good / Average / Poor based on Sleep Hours and Stress Level Assess relationship between sleep and stress Lifestyle_Segment Combination of Diet Type and Exercise Level Analyze lifestyle patterns holistically Lifestyle_Risk_Score Calculated from Sleep Quality, Stress Level, Activity Level Quantify lifestyle-related risk Condition_Severity Severity score (1–3) based on type of mental health condition Highlight high-risk conditions
 
 Data Structuring (JSON) 
-o Processed data exported to JSON for smooth input into Power BI. 
-o Ensured consistent formatting for all visuals and KPIs.
+ Processed data exported to JSON for smooth input into Power BI. 
+ Ensured consistent formatting for all visuals and KPIs.
 
 Visualization (Power BI) 
-o Created dashboard with KPIs, charts, scatter plots, heatmaps, and tables.
-o Included slicers/filters for interactive exploration by gender, age, diet and few other factors. 
-o Dashboard layout designed to quickly identify trends, risk segments, and correlations.
+ Created dashboard with KPIs, charts, scatter plots, heatmaps, and tables.
+ Included slicers/filters for interactive exploration by gender, age, diet and few other factors. 
+ Dashboard layout designed to quickly identify trends, risk segments, and correlations.
 
 # Project Goal
 The project demonstrates a complete data analytics workflow:
@@ -30,5 +31,4 @@ The project demonstrates a complete data analytics workflow:
 Raw data ingestion → Python exploration
 Cleaning & preprocessing → Excel
 Data enrichment → postgreSQL
-Structuring for visualization → JSON
 Insight generation → Power BI dashboard It allowed combining multiple tools and techniques while practicing logic creation, data transformation, and visualization design skills essential for a professional Data Analyst.
